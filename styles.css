@@ -1,0 +1,318 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --section-bg: #252525;
+    --section-alt-bg: #2c2c2c;
+    --primary-color: #3bdb17;
+    --hover-color: #ff4f4f;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Section Layout: Full-Screen Height & Clear Separation */
+.section {
+    min-height: 100vh;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Alternating Background Colors for Sections */
+.section:nth-child(odd) {
+    background: var(--section-bg);
+}
+
+.section:nth-child(even) {
+    background: var(--section-alt-bg);
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9); 
+    padding: 2px 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#home {
+    margin-top: 80px; /* Pushes the intro section below the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-text span {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn, .btn-outline {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-right: 10px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    background: var(--hover-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Education & Internship Timeline */
+.timeline {
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 25px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.timeline-item::before {
+    content: "●";
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+/* Projects - Grid Layout */
+
+
+/* Fix Projects Section (Center the Boxes) */
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-card {
+    background: var(--section-bg);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 40%;  /* Keep it responsive */
+    min-width: 300px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Skills - Grid Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+    width: 70%;
+    margin: auto;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Skill Images */
+.skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 100px 10%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    width: 60%;
+    margin: auto;
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Input Fields */
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 18px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+#contact-form input::placeholder, 
+#contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Hover & Focus Effects */
+#contact-form input:focus, 
+#contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Submit Button */
+#contact-form button {
+    width: 100%;
+    max-width: 600px;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#contact-form button:hover {
+    background: var(--hover-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 5%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 200px;
+    }
+
+    .timeline {
+        width: 90%;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    #contact {
+        width: 80%;
+    }
+
+    .skills-grid {
+        width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}

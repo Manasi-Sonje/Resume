@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio 🚀</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- Toggle for Dark/Light Mode -->
+    <button id="theme-toggle">🌙</button>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#internship">Internship</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Hey, I'm <span>Manasi Sonje,</span> 👋</h1>
+                <p>Turning ideas into reality with code! I build interactive experiences and solve problems, one line of code at a time.</p>
+                <div class="buttons">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn-outline">Contact Me</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <br><br>
+
+    <!-- Education Section (Timeline Style) -->
+    <section id="education">
+        <h2>🎓 Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>R.C. PATEL INSTITUTE OF TECHNOLOGY</h3>
+                <p>B.Tech in Computer Science (2023-2026)</p>
+            </div>
+            <div class="timeline-item">
+                <h3>S.S.V.P.S POLYTECHNIC</h3>
+                <p>Diploma in Computer Science (2020-2023)</p>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+    <!-- Projects (Card Format) -->
+    <section id="projects">
+        <h2>💡 Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>SHORTEST PATH FINDING IN GRAPHS USING BFS</h3>
+                <p>Developed a high-performance Java application with Swing, implementing Dijkstra’s algorithm for shortest path calculation.</p>
+            </div>
+            <div class="project-card">
+                <h3>PRE-OWNED BOOK SELL/PURCHASE WEBSITE</h3>
+                <p>Developed a platform that connects buyers and sellers for book trading.</p>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+    <!-- Internship (Timeline Style) -->
+    <section id="internship">
+        <h2>💼 Internship</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>SpWeb@Devs (Web Development Intern)</h3>
+                <p>Designed client websites, worked on GitHub for version control, and handled live data streams.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Sumago Infotech Pvt. Ltd. (Software Intern)</h3>
+                <p>Developed a MasterChef website clone using PHP and SQL Server.</p>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+    <!-- Skills (Grid Format) -->
+    <section id="skills">
+        <h2>⚡ Skills</h2>
+        <div class="skills-grid">
+            <div class="skill"><img src="assets/html.jpg" alt="HTML"> HTML</div>
+            <div class="skill"><img src="assets/css.png" alt="CSS"> CSS</div>
+            <div class="skill"><img src="assets/js.png" alt="JavaScript"> JavaScript</div>
+            <div class="skill"><img src="assets/react.png" alt="React"> React</div>
+            <div class="skill"><img src="assets/node.png" alt="Node.js"> Node.js</div>
+            <div class="skill"><img src="assets/mongodb.png" alt="MongoDB"> MongoDB</div>
+            <div class="skill"><img src="assets/java.png" alt="Java"> Java</div>
+            <div class="skill"><img src="assets/php.png" alt="PHP"> PHP</div>
+            <div class="skill"><img src="assets/mysql.png" alt="MySQL"> MySQL</div>
+        </div>
+    </section>
+    <br><br><br><br>
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>📩 Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="responseMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
